@@ -6,6 +6,7 @@ plugins {
     // Kotlin 추가
     id 'org.jetbrains.kotlin.jvm' version '1.6.21'
     id 'org.jetbrains.kotlin.plugin.jpa' version '1.6.21'
+    id 'org.jetbrains.kotlin.plugin.spring' version '1.6.21'
 }
 
 group = 'io.dongvelop'
@@ -23,6 +24,9 @@ dependencies {
     // Kotlin Standard Library 추가
     implementation 'org.jetbrains.kotlin:kotlin-stdlib-jdk8'
     implementation 'org.jetbrains.kotlin:kotlin-reflect:1.6.21'
+
+    implementation 'com.fasterxml.jackson.module:jackson-module-kotlin:2.13.3'
+
 
     runtimeOnly 'com.h2database:h2'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
