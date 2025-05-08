@@ -50,7 +50,7 @@ class UserServiceTest @Autowired constructor(
         userRepository.saveAll(
             listOf(
                 User("A", 20),
-                User("B", null)
+                User("B", null),
             )
         )
 
@@ -68,7 +68,7 @@ class UserServiceTest @Autowired constructor(
     fun updateUserTest() {
         // given
         val savedUser = userRepository.save(User("A", 20))
-        val request = UserUpdateRequest(savedUser.id, "B")
+        val request = UserUpdateRequest(savedUser.id!!, "B")
 
         // when
         userService.updateUserName(request)
