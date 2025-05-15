@@ -9,11 +9,11 @@ import org.springframework.data.jpa.repository.JpaRepository
  */
 interface UserLoanHistoryRepository : JpaRepository<UserLoanHistory, Long> {
 
-    fun findByBookNameAndStatus(bookName: String, status: UserLoanStatus): UserLoanHistory?
+//    fun findByBookNameAndStatus(bookName: String, status: UserLoanStatus): UserLoanHistory?
 
     // AS-IS
     fun findAllByStatus(status: UserLoanStatus): List<UserLoanHistory>
 
     // TO-BE
-    fun countByStatus(status: UserLoanStatus): Long
+//    fun countByStatus(status: UserLoanStatus): Long
 }

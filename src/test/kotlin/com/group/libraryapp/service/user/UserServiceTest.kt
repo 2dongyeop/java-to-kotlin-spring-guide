@@ -88,7 +88,7 @@ class UserServiceTest @Autowired constructor(
     @DisplayName("유저 삭제가 정상 동작한다.")
     fun deleteUserTest() {
         // given
-        val savedUser = userRepository.save(User("A", 20))
+        userRepository.save(User("A", 20))
 
         // when
         userService.deleteUser("A")
